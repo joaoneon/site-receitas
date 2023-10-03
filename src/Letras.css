@@ -1,76 +1,70 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #f8f8f8;
-    padding: 10px;
-  }
-  
-  nav a {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+header {
+background-color: #f8f8f8;
+padding: 10px;
+}
+
+nav a {
+text-decoration: none;
+color: black;
+margin: 0 15px;
+}
+
+#right-nav {
+float: right;
+}
+
+nav a:hover {
+color: orange;
+}
+
+main {
+padding: 20px;
+}
+
+h1 {
+margin-bottom: 20px;
+color: orange;
+margin-left: calc(100% / 5 + 10px);
+}
+
+.alfabeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.alfabeto a {
     text-decoration: none;
     color: black;
-    margin: 0 15px;
-  }
-  
-  #right-nav {
-    float: right;
-  }
-  
-  nav a:hover {
-    color: orange;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    color: orange;
-    margin-left: calc(100% / 10);
-  }
-  
-
-  input {
-    width: 71%; 
-    padding: 10px 15px; 
-    margin: 20px 0px 20px calc(100%/ 8 - 10px) ;
-    font-size: 16px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
-    outline: none; 
-    transition: border-color 0.3s ease; 
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-input:focus {
-    border-color: orange;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
-}
-
-input::placeholder {
-    color: darkgray;
-    opacity: 1;
-}
-
-.searchButton {
+.alfabeto a:hover {
     background-color: orange;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 4px;
 }
-  
-  .receitas-container {
+
+.receitas-container {
+    margin-top: 20px;
+}
+
+.receitas-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -142,4 +136,3 @@ input::placeholder {
   .content h2 {
     min-height: 56px;
   }
-  
