@@ -1,9 +1,8 @@
 // src/App.js
 import React from 'react';
-import './App.css';
+import './Home.css';
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Receita from './components/Receita';
+import Receita from '../../components/Receita';
 
 function App() {
 
@@ -26,13 +25,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header>
-      </Header>
       <main>
         <h1>Receitas Aleatórias</h1>
         <div className="receitas-container">
           {meals.map((meal, index) => (
-            <Receita meal={meal}></Receita>
+            <Receita key={meal.idMeal} meal={meal}></Receita>
           ))}
         </div>
       </main>

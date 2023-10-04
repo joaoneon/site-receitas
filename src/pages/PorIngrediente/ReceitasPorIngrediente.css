@@ -1,83 +1,51 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
-  }
-  
-  header {
+}
+
+header {
     background-color: #f8f8f8;
     padding: 10px;
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: black;
     margin: 0 15px;
-  }
-  
-  #right-nav {
+}
+
+#right-nav {
     float: right;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     color: orange;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 20px;
     color: orange;
     margin-left: calc(100% / 10);
-  }
-  
-
-  input {
-    width: 71%; 
-    padding: 10px 15px; 
-    margin: 20px 0px 20px calc(100%/ 8 - 10px) ;
-    font-size: 16px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
-    outline: none; 
-    transition: border-color 0.3s ease; 
 }
 
-input:focus {
-    border-color: orange;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
-}
 
-input::placeholder {
-    color: darkgray;
-    opacity: 1;
-}
-
-.searchButton {
-    background-color: orange;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 4px;
-}
-  
-  .receitas-container {
+.receitas-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .receita {
+}
+
+.receita {
     flex-basis: calc(100% / 4 - 20px);
     margin: 10px;
     border: 1px solid #ddd;
@@ -89,14 +57,14 @@ input::placeholder {
     cursor: pointer;
     border-radius: 0.75rem;
     overflow: hidden;
-  }
-  
-  .receita a {
+}
+
+.receita a {
     display: flex;
     width: 100%;
-  }
-  
-  .receita a img {
+}
+
+.receita a img {
     object-fit: cover;
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
@@ -104,24 +72,24 @@ input::placeholder {
     max-height: 12rem;
     width: 100%;
     display: block;
-  }
-  
-  .receita-info {
+}
+
+.receita-info {
     display: flex;
     flex-direction: column;
     padding: 10px;
     text-align: left;
-  }
-  
-  .receita-info .content {
-    flex-grow: 1; 
-  }
-  
-  .receita div {
+}
+
+.receita-info .content {
+    flex-grow: 1;
+}
+
+.receita div {
     padding: 10px;
-  } 
-  
-  .receita-info button {
+}
+
+.receita-info button {
     align-self: flex-start;
     background-color: orange;
     color: white;
@@ -130,16 +98,16 @@ input::placeholder {
     cursor: pointer;
     border-radius: 5px;
     margin-top: auto;
-  }
-  
-  .receita-info button:hover {
+}
+
+.receita-info button:hover {
     background-color: darkorange;
-  }
-  .receita-info button:active {
+}
+
+.receita-info button:active {
     opacity: 0.7;
-  }
-  
-  .content h2 {
+}
+
+.content h2 {
     min-height: 56px;
-  }
-  
+}

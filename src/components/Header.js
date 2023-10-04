@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <header>
             <nav>
-                <a href="/" id="inicio">Início</a>
+                <Link to="/" id="inicio">Início</Link>
                 <div id="right-nav">
-                    <a href="/">Pesquisar Receitas</a>
-                    <a href="/">Receitas por Letra</a>
-                    <a href="/">Receitas por Ingredientes</a>
+                    <Link to="nomes">Pesquisar Receitas</Link>
+                    <Link to="letras">Receitas por Letra</Link>
+                    <Link to="ingredientes">Receitas por Ingredientes</Link>
                 </div>
             </nav>
         </header>

@@ -6,9 +6,9 @@ const Alfabeto = ({ onLetraClick }) => {
     return (
         <div className="alfabeto">
             {letras.map(letra => (
-                <a 
-                    key={letra} 
-                    href="/" 
+                <a
+                    key={letra}
+                    href="/"
                     onClick={(e) => {
                         e.preventDefault();
                         onLetraClick(letra);

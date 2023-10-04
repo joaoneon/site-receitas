@@ -1,43 +1,27 @@
-import React, { useState } from 'react';
-import Header from './components/Header'; 
-import Receita from './components/Receita';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home/Home';
+import Nomes from './pages/Nomes/Nomes';
+import Letras from './pages/Letras/Letras';
+import Ingredientes from './pages/Ingredientes/Ingredientes';
+import ReceitasPorIngrediente from './pages/PorIngrediente/ReceitasPorIngrediente';
+import ReceitaPage from './pages/Receita/Receita';
 
-const ProcurarReceitaPorNome = () => {
-    const [nomeReceita, setNomeReceita] = useState('');
-    const [receitas, setReceitas] = useState([]);
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/nomes" element={<Nomes />} />
+        <Route path="/letras" element={<Letras />} />
+        <Route path="/ingredientes" element={<Ingredientes />} />
+        <Route path="/ingredientes/:ingrediente" element={<ReceitasPorIngrediente />} />
+        <Route path="/receita/:id" element={<ReceitaPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
-    const handleInputChange = (event) => {
-        setNomeReceita(event.target.value);
-    };
-
-    const pesquisarReceitas = async () => {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${nomeReceita}`);
-        const data = await response.json();
-
-        setReceitas(data.meals || []);
-    };
-
-    return (
-        <div>
-            <Header />
-            <main>
-                <h1>Procurar receitas por Nome</h1>
-                <input 
-                    type="text" 
-                    placeholder="Digite o nome da receita" 
-                    value={nomeReceita}
-                    onChange={handleInputChange}
-                    onKeyUp={(e) => e.key === 'Enter' && pesquisarReceitas()}
-                />
-                <button className="searchButton" onClick={pesquisarReceitas}>Pesquisar</button>
-                <div className="receitas-container">
-                    {receitas.map(receita => (
-                        <Receita key={receita.idMeal} meal={receita} />
-                    ))}
-                </div>
-            </main>
-        </div>
-    );
-};
-
-export default ProcurarReceitaPorNome;
+export default App;
