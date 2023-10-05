@@ -54,11 +54,11 @@ function ReceitaPage() {
                 <h1 className={styles.h1}>{meal.strMeal}</h1>
                 <img src={meal.strMealThumb} alt={`Imagem de ${meal.strMeal}`} className={styles.img} />
                 <div className={styles.divCategories}>
-                <p className={styles.p}>Categoria: {meal.strCategory}</p>
-                <p className={styles.p}>Área: {meal.strArea}</p>
-                <p className={styles.p}>Tags: {meal.strTags}</p>
+                <p className={styles.p}><strong>Categoria:</strong> {meal.strCategory}</p>
+                <p className={styles.p}><strong>Área:</strong> {meal.strArea}</p>
+                <p className={styles.p}><strong>Tags:</strong> {meal.strTags}</p>
                 </div>
-
+                <p className={styles.pToMake}>{meal.strInstructions}</p>
                 <div className={styles.ingredientesMedidas}>
                     <div className={styles.ingredientes}>
                         <h3 className={styles.h3}>Ingredientes</h3>
@@ -76,7 +76,7 @@ function ReceitaPage() {
                 </div>
 
                 <button onClick={() => window.open(meal.strYoutube, '_blank')} className={styles.button}>Assistir no YouTube</button>
-                <a href={meal.strSource} className={styles['botao-source']} target="_blank" rel="noopener noreferrer">Site original da receita</a>
+                <a href={meal.strSource} className={styles.linkSource} target="_blank" rel="noopener noreferrer">Fonte Original</a>
             </main>
         </div>
     );
