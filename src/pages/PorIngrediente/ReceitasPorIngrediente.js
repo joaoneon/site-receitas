@@ -23,7 +23,7 @@ const ReceitasPorIngrediente = () => {
     return (
         <div className={styles['receitas-container']}>
             {receitas.map(receita => (
-                <Receita key={receita.idMeal} meal={receita} style={styles}/>
+                <Receita key={receita.idMeal} meal={receita} style={styles} />
             ))}
         </div>
     );

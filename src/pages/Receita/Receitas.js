@@ -54,9 +54,9 @@ function ReceitaPage() {
                 <h1 className={styles.h1}>{meal.strMeal}</h1>
                 <img src={meal.strMealThumb} alt={`Imagem de ${meal.strMeal}`} className={styles.img} />
                 <div className={styles.divCategories}>
-                <p className={styles.p}><strong>Categoria:</strong> {meal.strCategory}</p>
-                <p className={styles.p}><strong>Área:</strong> {meal.strArea}</p>
-                <p className={styles.p}><strong>Tags:</strong> {meal.strTags}</p>
+                    <p className={styles.p}><strong>Categoria:</strong> {meal.strCategory}</p>
+                    <p className={styles.p}><strong>Área:</strong> {meal.strArea}</p>
+                    <p className={styles.p}><strong>Tags:</strong> {meal.strTags}</p>
                 </div>
                 <p className={styles.pToMake}>{meal.strInstructions}</p>
                 <div className={styles.ingredientesMedidas}>

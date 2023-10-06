@@ -24,7 +24,7 @@ function IngredientesPage() {
             <main>
                 <h1 className={styles.h1}>Ingredientes</h1>
                 <input
-                className={styles.ingredientesInput} 
+                    className={styles.ingredientesInput}
                     type="text"
                     placeholder="Digite o ingrediente"
                     value={filtro}

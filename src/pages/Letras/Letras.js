@@ -19,10 +19,10 @@ const ReceitasPorLetra = () => {
         <div>
             <main>
                 <h1>Receitas por Letra</h1>
-                <Alfabeto onLetraClick={handleLetraClick} styles={styles}/>
+                <Alfabeto onLetraClick={handleLetraClick} styles={styles} />
                 <div className={styles["receitas-container"]}>
                     {receitas.map(receita => (
-                        <Receita key={receita.idMeal} meal={receita} style={styles}/>
+                        <Receita key={receita.idMeal} meal={receita} style={styles} />
                     ))}
                 </div>
             </main>

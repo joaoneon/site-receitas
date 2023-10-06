@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Alfabeto = ({ onLetraClick , styles}) => {
+const Alfabeto = ({ onLetraClick, styles }) => {
     const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
     return (

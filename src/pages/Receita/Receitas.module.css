@@ -5,7 +5,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .h1 {
@@ -14,7 +14,7 @@
   margin-left: 0px;
   align-items: center;
   align-self: center;
-  align-content: center ;
+  align-content: center;
 }
 
 .img {
@@ -22,10 +22,10 @@
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-.divCategories{
+.divCategories {
   display: flex;
   justify-content: space-around;
   width: 80%;
@@ -43,34 +43,39 @@
   padding-left: 15%;
 }
 
-.ingredientes h3, .medidas h3 {
+.ingredientes h3,
+.medidas h3 {
   margin-bottom: 10px;
 }
 
-.ingredientes, .medidas {
-  width: 45%; 
+.ingredientes,
+.medidas {
+  width: 45%;
   text-align: left;
   padding: 0 20px;
 }
 
-.ingredientes ol, .medidas ol {
-  padding-left: 0px; 
+.ingredientes ol,
+.medidas ol {
+  padding-left: 0px;
   list-style-type: none;
   counter-reset: item;
 }
 
-.ingredientes li, .medidas li {
+.ingredientes li,
+.medidas li {
   margin-bottom: 5px;
   position: relative;
-  padding-left: 30px; 
+  padding-left: 30px;
   text-align: left;
   list-style-type: none;
   font-size: 1rem;
-  counter-increment: item;  
+  counter-increment: item;
 }
 
-.ingredientes li::before, .medidas li::before {
-  content: counter(item) "."; 
+.ingredientes li::before,
+.medidas li::before {
+  content: counter(item) ".";
   position: absolute;
   left: 0;
   font-size: 1rem;
