@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Receita from '../../components/Receita';
-import './ReceitasPorIngrediente.css';
+import styles from './ReceitasPorIngrediente.module.css';
 
 const ReceitasPorIngrediente = () => {
     const { ingrediente } = useParams();
@@ -21,9 +21,9 @@ const ReceitasPorIngrediente = () => {
     }, [ingrediente]);
 
     return (
-        <div className="receitas-container">
+        <div className={styles['receitas-container']}>
             {receitas.map(receita => (
-                <Receita key={receita.idMeal} meal={receita} />
+                <Receita key={receita.idMeal} meal={receita} style={styles}/>
             ))}
         </div>
     );

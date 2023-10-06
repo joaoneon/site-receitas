@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f8f8f8;
+    padding: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+  }
+  
+  #right-nav {
+    float: right;
+  }
+  
+  nav a:hover {
+    color: orange;
+  }
+  

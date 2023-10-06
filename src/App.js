@@ -6,7 +6,7 @@ import Nomes from './pages/Nomes/Nomes';
 import Letras from './pages/Letras/Letras';
 import Ingredientes from './pages/Ingredientes/Ingredientes';
 import ReceitasPorIngrediente from './pages/PorIngrediente/ReceitasPorIngrediente';
-import ReceitaPage from './pages/Receita/Receita';
+import ReceitaPage from './pages/Receita/Receitas';
 
 function App() {
   return (

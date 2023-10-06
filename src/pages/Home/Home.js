@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import './Home.css';
+import styles from './Home.module.css';
 import { useState, useEffect } from 'react';
 import Receita from '../../components/Receita';
 
@@ -24,12 +24,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <main>
         <h1>Receitas Aleatórias</h1>
-        <div className="receitas-container">
+        <div className={styles["receitas-container"]}>
           {meals.map((meal, index) => (
-            <Receita key={meal.idMeal} meal={meal}></Receita>
+            <Receita key={meal.idMeal} meal={meal} style={styles}></Receita>
           ))}
         </div>
       </main>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Receita from '../../components/Receita';
 import Alfabeto from '../../components/Alfabeto'
-import './Letras.css'
+import styles from './Letras.module.css';
 
 const ReceitasPorLetra = () => {
     const [receitas, setReceitas] = useState([]);
@@ -19,10 +19,10 @@ const ReceitasPorLetra = () => {
         <div>
             <main>
                 <h1>Receitas por Letra</h1>
-                <Alfabeto onLetraClick={handleLetraClick} />
-                <div className="receitas-container">
+                <Alfabeto onLetraClick={handleLetraClick} styles={styles}/>
+                <div className={styles["receitas-container"]}>
                     {receitas.map(receita => (
-                        <Receita key={receita.idMeal} meal={receita} />
+                        <Receita key={receita.idMeal} meal={receita} style={styles}/>
                     ))}
                 </div>
             </main>

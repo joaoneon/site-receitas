@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Receita from '../../components/Receita';
-import './Nomes.css';
+import styles from './Nomes.module.css';
 
 const ProcurarReceitaPorNome = () => {
     const [nomeReceita, setNomeReceita] = useState('');
@@ -24,16 +24,17 @@ const ProcurarReceitaPorNome = () => {
             <main>
                 <h1>Procurar receitas por Nome</h1>
                 <input
+                className={styles.nomeInput}
                     type="text"
                     placeholder="Digite o nome da receita"
                     value={nomeReceita}
                     onChange={handleInputChange}
                     onKeyUp={(e) => e.key === 'Enter' && pesquisarReceitas()}
                 />
-                <button className="searchButton" onClick={pesquisarReceitas}>Pesquisar</button>
-                <div className="receitas-container">
+                <button className={styles.searchButton} onClick={pesquisarReceitas}>Pesquisar</button>
+                <div className={styles.receitasContainer}>
                     {receitas.map(receita => (
-                        <Receita key={receita.idMeal} meal={receita} />
+                        <Receita key={receita.idMeal} meal={receita} style={styles}/>
                     ))}
                 </div>
             </main>

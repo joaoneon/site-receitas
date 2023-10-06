@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Alfabeto = ({ onLetraClick }) => {
+const Alfabeto = ({ onLetraClick , styles}) => {
     const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
     return (
-        <div className="alfabeto">
+        <div className={styles.alfabeto}>
             {letras.map(letra => (
                 <a
                     key={letra}

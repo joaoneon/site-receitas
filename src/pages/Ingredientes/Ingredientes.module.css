@@ -1,0 +1,55 @@
+main {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: orange;
+    margin-left: calc(100% / 6 + 15px);
+}
+
+.ingredientesInput {
+    width: 65%;
+    padding: 10px 15px;
+    margin: 20px 0px 20px calc(100%/ 6 + 15px);
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.ingredientesInput :focus {
+    border-color: orange;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+.ingredientesInput ::placeholder {
+    color: darkgray;
+    opacity: 1;
+}
+
+.ingredientesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15%;
+}
+
+.ingrediente {
+    flex-basis: 30%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ingrediente:hover {
+    background-color: orange;
+}

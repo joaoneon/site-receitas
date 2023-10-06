@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Ingredientes.css';
 import { Link } from 'react-router-dom';
+import styles from './Ingredientes.module.css';
 
 function IngredientesPage() {
     const [ingredientes, setIngredientes] = useState([]);
@@ -22,19 +22,20 @@ function IngredientesPage() {
     return (
         <div>
             <main>
-                <h1>Ingredientes</h1>
+                <h1 className={styles.h1}>Ingredientes</h1>
                 <input
+                className={styles.ingredientesInput} 
                     type="text"
                     placeholder="Digite o ingrediente"
                     value={filtro}
                     onChange={(e) => setFiltro(e.target.value)}
                 />
-                <div className="ingredientes-container">
+                <div className={styles.ingredientesContainer}>
                     {ingredientes
                         .sort((a, b) => a.strIngredient.localeCompare(b.strIngredient))
                         .filter(ingrediente => ingrediente.strIngredient.toLowerCase().includes(filtro.toLowerCase()))
                         .map(ingrediente => (
-                            <Link to={`/ingredientes/${ingrediente.strIngredient}`} className="ingrediente" key={ingrediente.idIngredient}>
+                            <Link to={`/ingredientes/${ingrediente.strIngredient}`} className={styles.ingrediente} key={ingrediente.idIngredient}>
                                 <p>{ingrediente.strIngredient}</p>
                             </Link>
                         ))}
